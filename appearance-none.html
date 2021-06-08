@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>
+		Effortless Custom Form Input Styling With Webkit Appearance None
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+
+	<h1>
+		Effortless Custom Form Input Styling With Webkit Appearance None
+	</h1>
+
+	<style type="text/css">
+
+		/* Remove the browser's native styling. */
+		.clear-styles {
+			appearance: none ;
+				-moz-appearance: none ;
+				-webkit-appearance: none ;
+		}
+
+		/* Now, let's add our custom form input styling on top of webkit-appearance: none */
+
+		input[ type = "button" ].clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+		}
+
+		button.clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+		}
+
+		input[ type = "checkbox" ].clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			height: 15px ;
+			margin: 0px 0px 0px 0px ;
+			width: 15px ;
+		}
+		input[ type = "checkbox" ].clear-styles.custom:checked {
+			background-color: #333333 ;
+		}
+
+		input[ type = "radio" ].clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 15px 15px 15px 15px ;
+			display: inline-block ;
+			font-size: inherit ;
+			height: 15px ;
+			margin: 0px 0px 0px 0px ;
+			width: 15px ;
+		}
+		input[ type = "radio" ].clear-styles.custom:checked {
+			background-color: #333333 ;
+		}
+
+		input[ type = "input" ].clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+			width: 100px ;
+		}
+
+		input[ type = "file" ].clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+			width: 100px ;
+		}
+
+		textarea {
+			width: 100px ;
+		}
+		textarea.clear-styles.custom {
+			background-color: gold ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+			width: 100px ;
+		}
+
+		select {
+			width: 100px ;
+		}
+		select.clear-styles.custom {
+			background-color: gold ;
+			background-image: url( "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC" ) ;
+			background-position: calc( 100% - 10px ) 50% ;
+			background-repeat: no-repeat ;
+			border: 1px solid red ;
+			border-radius: 3px 3px 3px 3px ;
+			display: block ;
+			font-size: inherit ;
+			margin: 0px 0px 0px 0px ;
+			padding: 10px 10px 10px 10px ;
+		}
+		/* Used to remove down-arrow in IE11. */
+		select.clear-styles.custom::-ms-expand {
+ 			display: none ;
+ 		}
+
+	</style>
+
+	<div class="comparisons">
+
+		<div>
+			<input type="button" value="Hello" />
+		</div>
+		<div>
+			<input type="button" value="Hello" class="clear-styles" />
+		</div>
+		<div>
+			<input type="button" value="Hello" class="clear-styles custom" />
+		</div>
+
+		<div>
+			<button>Hello</button>
+		</div>
+		<div>
+			<button class="clear-styles">Hello</button>
+		</div>
+		<div>
+			<button class="clear-styles custom">Hello</button>
+		</div>
+
+		<div>
+			<input type="checkbox" />
+		</div>
+		<div>
+			<input type="checkbox" class="clear-styles" />
+		</div>
+		<div>
+			<input type="checkbox" class="clear-styles custom" />
+		</div>
+
+		<div>
+			<input type="radio" name="radio-default" />
+			<input type="radio" name="radio-default" />
+		</div>
+		<div>
+			<input type="radio" name="radio-clear" class="clear-styles" />
+			<input type="radio" name="radio-clear" class="clear-styles" />
+		</div>
+		<div>
+			<input type="radio" name="radio-custom" class="clear-styles custom" />
+			<input type="radio" name="radio-custom" class="clear-styles custom" />
+		</div>
+
+		<div>
+			<input type="input" value="Hello" />
+		</div>
+		<div>
+			<input type="input" value="Hello" class="clear-styles" />
+		</div>
+		<div>
+			<input type="input" value="Hello" class="clear-styles custom" />
+		</div>
+
+		<div>
+			<input type="file" size="1" />
+		</div>
+		<div>
+			<input type="file" size="1" class="clear-styles" />
+		</div>
+		<div>
+			<input type="file" size="1" class="clear-styles custom" />
+		</div>
+
+		<div>
+			<textarea>Hello</textarea>
+		</div>
+		<div>
+			<textarea class="clear-styles">Hello</textarea>
+		</div>
+		<div>
+			<textarea class="clear-styles custom">Hello</textarea>
+		</div>
+
+		<div>
+			<select>
+				<option>Hello</option>
+				<option>An option with a really long text value.</option>
+			</select>
+		</div>
+		<div>
+			<select class="clear-styles">
+				<option>Hello</option>
+				<option>An option with a really long text value.</option>
+			</select>
+		</div>
+		<div>
+			<select class="clear-styles custom">
+				<option>Hello</option>
+				<option>An option with a really long text value.</option>
+			</select>
+		</div>
+
+	</div>
+
+  <div>
+    <p><a href="https://www.bennadel.com/blog/3776-effortless-custom-form-input-styling-with-webkit-appearance-none.htm">Source</a></p>
+</body>
+</html>
